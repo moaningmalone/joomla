@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.x" type="template">
+	<name>blank_template</name>
+	<creationDate>2016-10-01</creationDate>
+	<author>Moaning Malone</author>
+	<authorEmail>hans@flimser.ch</authorEmail>
+	<license>GNU/GPL</license>
+	<version>1</version>
+	<description>blank template</description>
+	<files>
+			<filename>index.php</filename>
+			<filename>templateDetails.xml</filename>
+			<folder>css</folder>
+		</files>
+		<positions>
+			<position>top</position>
+			<position>navigation</position>
+			<position>left</position>
+			<position>right</position>
+			<position>footer</position>
+		</positions>
+	</extension>

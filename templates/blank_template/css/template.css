@@ -1,0 +1,215 @@
+/**
+ * normalize
+ */
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+img {
+  border: 0;
+  max-width: 100%;
+}
+nav ul {
+  list-style-type: none;
+}
+
+
+
+/** General
+-------------------------------------------------------------------------------*/
+h1 {
+  font-size: 20px;
+  color: red;
+}
+h2 {
+  font-size: 18px;
+  color: green;
+}
+p {
+  font-size: 12px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  color: green;
+}
+
+
+
+/* Flexbox
+-------------------------------------------------------------------------------*/
+.flex-container {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+}
+.flex-item {
+  flex: 1;
+  padding: 1px;
+  border: solid 1px #e7e7e7;
+}
+
+
+/** Media Queries (small / medium / large)
+-------------------------------------------------------------------------------*/
+
+
+@media (max-width: 720px ) {
+  #mobileheader {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+  }
+  .toggle-nav {
+    background-color:transparent;
+    border: none;
+    cursor:pointer;
+    display:inline-block;
+    flex: 1;
+    font-size: 26px;
+    font-weight:bold;
+    padding:2px 4px;
+    text-align: left;
+    text-decoration:none;
+  }
+
+  /** Smashing Mobile Navigation
+  -------------------------------------------------------------------------------*/
+
+  /** Navigation Toggle Button and Closing Button **/
+  .nb,
+  .nc {
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    right: 1.5em;
+    top: 1.75em;
+    z-index: 4;
+
+    padding: .4em;
+
+    color: #fff;
+    background: #ccc;
+    border-radius: .25em;
+    border: .08em solid rgba(0,0,0,.25);
+    box-shadow: 0 .08em .08em rgba(0, 0, 0, .25);
+  }
+
+  .nb:active,
+  .nc:active {
+    background: #999;
+    box-shadow: 0 .08em .08em rgba(255, 255, 255, .65), 0 -.08em .08em rgba(255, 255, 255, .65);
+  }
+
+  /* Normally the closing button is hidden */
+  .nc {
+    display: none;
+    z-index: 3;
+  }
+
+  /* and as soon as the nav is targeted we reveal it and place it on top of the menu button */
+  .nav:target + .nc {
+    display: block;
+    z-index: 5;
+    padding: .38em 1.65em;
+  }
+
+  /** Mobile Navigation Styling
+   * The container is at 0 height at first
+   * when receiving target everything becomes
+   * visible by giving it height and display: block
+   */
+  .nav {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0px;
+    max-height: 0px;
+    padding-top: 0px;
+    opacity: 0;
+    transition: none ;
+  }
+
+  .nav ul {
+    display: none;
+    margin: 0;
+  }
+
+  .nav li {
+    line-height: 1.65;
+    padding: 0 .3275em;
+  }
+
+  .nav a {
+    display: block;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /** When clicking the Menu button the nav receives :target
+   */
+  .nav:target {
+    position: relative;
+    top: -10em;
+    z-index: 2;
+    padding-top: 10em;
+    margin-bottom: -8em;
+    height: 100%;
+    max-height: 62.5em;
+    opacity: 1;
+    transition:
+      opacity .4s ease-out,
+      max-height .4s ease-out;
+  }
+
+  .nav:target ul {
+    display: block;
+    margin: 1em 5.5%;
+  }
+
+  .nav:target a {
+    width: auto;
+    height: 100%;
+    padding: .3875em 0 .3875em .5475em;
+    border-bottom: 0.08em solid rgba(0, 0, 0, 0.25);
+  }
+
+  .nav:target a:hover,
+  .nav:target a:focus {
+    background-color: #aaa;
+  }
+
+  .nav:target a:active {
+    color: #999;
+    background-color: #fff;
+  }
+
+}
+
+@media (max-width: 480px ) {
+}
+
+
+@media (min-width: 721px ) {
+  .mobile, .toggle-nav {
+    display: none;
+  }
+}
