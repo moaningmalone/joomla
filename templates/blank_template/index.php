@@ -23,7 +23,6 @@ $doc->_scripts = array();
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
 <link rel="stylesheet" media="(min-width: 767px)" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/slimbox2.css" type="text/css" />
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/joomla/templates/blank_template/js/togglemenu.js"></script>
 <script type="text/javascript" media="(min-width: 767px)" src="/joomla/templates/blank_template/js/slimbox2.js"></script>
 </head>
 <body>

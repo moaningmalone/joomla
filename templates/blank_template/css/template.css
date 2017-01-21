@@ -23,10 +23,9 @@ img {
   border: 0;
   max-width: 100%;
 }
-nav ul {
+nav ul, ul.menu {
   list-style-type: none;
 }
-
 
 
 /** General
@@ -50,6 +49,9 @@ a:hover {
   color: green;
 }
 
+ul.menu li a:hover, ul.menu li.active a {
+  color: red;
+}
 
 
 /* Flexbox
@@ -67,27 +69,13 @@ a:hover {
 }
 
 
-/** Media Queries (small / medium / large)
+/** Media Queries (small screen)
 -------------------------------------------------------------------------------*/
 
 
 @media (max-width: 720px ) {
-  #mobileheader {
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-  }
-  .toggle-nav {
-    background-color:transparent;
-    border: none;
-    cursor:pointer;
-    display:inline-block;
-    flex: 1;
-    font-size: 26px;
-    font-weight:bold;
-    padding:2px 4px;
-    text-align: left;
-    text-decoration:none;
+  .nomobile {
+    display: none;
   }
 
   /** Smashing Mobile Navigation
@@ -97,14 +85,11 @@ a:hover {
   .nb,
   .nc {
     font-weight: 700;
-    text-transform: uppercase;
     position: absolute;
     right: 1.5em;
     top: 1.75em;
     z-index: 4;
-
     padding: .4em;
-
     color: #fff;
     background: #ccc;
     border-radius: .25em;
@@ -151,12 +136,10 @@ a:hover {
     display: none;
     margin: 0;
   }
-
   .nav li {
     line-height: 1.65;
     padding: 0 .3275em;
   }
-
   .nav a {
     display: block;
     padding: 0;
@@ -204,12 +187,15 @@ a:hover {
 
 }
 
-@media (max-width: 480px ) {
-}
-
+/** Media Queries (large screen)
+-------------------------------------------------------------------------------*/
 
 @media (min-width: 721px ) {
-  .mobile, .toggle-nav {
+  .mobile {
     display: none;
+  }
+  .navbar li {
+    display: inline;
+    padding: 5px;
   }
 }
